@@ -11,7 +11,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130125063419) do
+ActiveRecord::Schema.define(:version => 20130125194852) do
+
+  create_table "status_changes", :force => true do |t|
+    t.boolean  "in"
+    t.string   "status"
+    t.integer  "user_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "status_changes", ["user_id", "created_at"], :name => "index_status_changes_on_user_id_and_created_at"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

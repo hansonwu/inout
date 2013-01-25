@@ -15,6 +15,7 @@
       <% end %>
     
       <%= f.submit "Sign in", class: "btn btn-primary" %>
+      <span class="no-account">or, <%= link_to('register.', new_user_registration_path) %></span>
     <% end %>
   </div>
 </div>
