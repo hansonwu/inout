@@ -1,2 +1,4 @@
-inout is an application that simulates the in and out board for a team. 
+-== InOut
+
+InOut is an application that simulates the in and out board for a team. 
 Users can signup, change their status and view all the statuses of other members. 
