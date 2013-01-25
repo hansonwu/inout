@@ -16,12 +16,12 @@ body {
 #logo {
   float: left;
   margin-right: 10px;
+  margin-left: 10px;
   font-size: 1.6em;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-bottom: 12px;
   font-weight: bold;
   &:hover {
-    color: white;
     text-decoration: none;
   }
 }
@@ -40,6 +40,33 @@ input, textarea, select, .uneditable-input {
 
 input[type="checkbox"] {
   margin: 10px 0px 12px 0px;
+}
+
+/* footer */
+
+footer {
+  margin-top: 40px;
+  padding-top: 8px;
+  border-top: 1px solid $clioGrey;
+  a {
+    color: $clioGrey;
+  }  
+  ul {
+    float: right;
+    list-style: none;
+    li {
+      float: left;
+      margin-left: 10px;
+    }
+  }
+}
+
+/* home */
+.hero-unit {
+  h1 {
+    font-size: 50px;
+  }
+  text-align: center;
 }
 
 /* miscellaneous */
