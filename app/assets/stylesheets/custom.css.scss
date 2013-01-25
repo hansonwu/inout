@@ -1,0 +1,53 @@
+@import "bootstrap";
+
+$clioRed:#be1d2d;
+$clioGrey:#878787;
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 70px;
+}
+
+/* header */
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.6em;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  font-weight: bold;
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+h2.form-title {
+  text-align: center;
+  font-size: 2.2em;
+  font-weight: normal;
+  color: $clioGrey;
+}
+
+input, textarea, select, .uneditable-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 0px 12px 0px;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing(border-box);
+}
