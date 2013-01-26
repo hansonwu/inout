@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   
   validates :name, presence: true, length: { maximum: 50 }
   
-  has_many :status_changes, dependent: :destroy
+  has_many :status_changes, dependent: :destroy, :order => "created_at DESC"
   has_one :current_status, :class_name => "StatusChange", :order => 'created_at DESC'
   
   # Check if a user is currently in the office
