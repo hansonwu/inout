@@ -1,1 +1,33 @@
-This is the log
+<div id="board-wrapper">
+  <div id="board">
+    <h3>Activity Log</h3><br />
+    <% if @status_changes.empty? %>
+      <h4>No activity found. Go to the <%= link_to 'Board', board_path %> to change your status.</h4>
+    <% else %>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Changed to</th>
+            <th>Message</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @status_changes.each do |status_change| %>
+            <tr>
+              <td>
+                <% if status_change.in %>
+                  <span class="in-status">Available</span>
+                <% else %>
+                  <span class="out-status">Not Available</span>
+                <% end %>
+              </td>
+              <td><%= status_change.status %></td>
+              <td><%= status_change.created_at %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>    
+    <% end %>
+  </div>
+</div>

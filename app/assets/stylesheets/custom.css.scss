@@ -25,7 +25,13 @@ body {
   font-weight: bold;
   &:hover {
     text-decoration: none;
-    color: white;
+    color: silver;
+  }
+}
+
+.navbar-inner {
+  .user-name {
+    color: darkOrange;
   }
 }
 
@@ -116,7 +122,7 @@ footer {
     border-radius: 15px;
     width: 90%;
     margin: 20px auto;
-    padding: 35px 20px 30px;
+    padding: 25px 20px 25px;
     font-size: 18px;
     h3 {
       line-height: 30px;

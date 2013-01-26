@@ -12,7 +12,7 @@ class StatusChangesController < ApplicationController
   end
   
   def log
-    
+    @status_changes = current_user.status_changes(order: "status_change.created_at ASC")
   end
   
   def create
