@@ -1,7 +1,8 @@
 @import "bootstrap";
 
-$clioRed:#F80000;
-$clioGrey:#878787;
+$clioRed: #F80000;
+$clioGrey: #878787;
+$clioGreen: #009933;
 
 html {
   overflow-y: scroll;
@@ -87,6 +88,30 @@ footer {
     font-size: 50px;
   }
   text-align: center;
+}
+
+/* status */
+#status-box {
+  width: 365px;
+  padding: 10px;
+  margin: 0px auto;
+  line-height: 0px;
+  .in-status {
+    color: $clioGreen;
+    font-weight: bold;
+  }
+  .out-status {
+    color: $clioRed;
+  }
+  form {
+    .btn {
+      padding: 3px 12px;
+    }
+  }
+  input[type="text"] {
+    margin-bottom: 0px;
+    width: 160px;
+  }
 }
 
 /* forms */
