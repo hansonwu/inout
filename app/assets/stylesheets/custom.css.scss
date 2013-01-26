@@ -9,22 +9,28 @@ html {
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 65px;
 }
 
 /* header */
 
 #logo {
+  color: darkOrange;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
   font-size: 1.6em;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 14px;
+  padding-bottom: 14px;
   font-weight: bold;
   &:hover {
     text-decoration: none;
+    color: white;
   }
+}
+
+ul.pull-right {
+  padding-top: 5px;
 }
 
 h2.form-title {
@@ -37,22 +43,11 @@ h2.form-title {
 textarea,
 input[type="text"],
 input[type="password"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="date"],
-input[type="month"],
-input[type="time"],
-input[type="week"],
-input[type="number"],
 input[type="email"],
-input[type="url"],
-input[type="search"],
-input[type="tel"],
-input[type="color"],
 .uneditable-input {
   width: 100%;
   margin-bottom: 15px;
-  padding: 3px 0px;
+  padding: 3px 0px 3px 4px;
 }
 
 div.field_with_errors input {
@@ -83,6 +78,7 @@ footer {
 }
 
 /* home */
+
 .hero-unit {
   h1 {
     font-size: 50px;
@@ -91,36 +87,63 @@ footer {
 }
 
 /* status */
-#status-box {
-  width: 365px;
-  padding: 10px;
-  margin: 0px auto;
-  line-height: 16px;
-  .in-status {
-    color: $clioGreen;
-    font-weight: bold;
+
+.in-status {
+  color: $clioGreen;
+}
+.out-status {
+  color: $clioRed;
+}
+
+.in-status, .out-status {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.status-message {
+  color: $clioGrey;
+  font-size: 14px;
+}
+
+/* board */
+
+#board-wrapper {
+  h2, h3, h4 {
+    margin: 0px;
   }
-  .out-status {
-    color: $clioRed;
-  }
-  .out-message {
-    color: $clioGrey;
-    font-size: 14px;
-  }
-  form {
-    .btn {
-      padding: 3px 12px;
-      margin-top: 10px;
+  #board {
+    border: 1px solid silver;
+    border-radius: 15px;
+    width: 90%;
+    margin: 20px auto;
+    padding: 35px 20px 30px;
+    font-size: 18px;
+    h3 {
+      line-height: 30px;
     }
-  }
-  input[type="text"] {
-    margin-top: 10px;
-    margin-bottom: 0px;
-    width: 160px;
+    td {
+      padding-left: 10px;
+    }
+    tr.current-user {
+      #create-status-change {
+        margin: 5px 0px;
+        form {
+          margin: 0px;
+          input[type="text"] {
+            width: 250px;
+            margin-bottom: 0px;
+          }
+          .btn {
+            padding: 3px 12px;
+          }
+        }
+      }      
+    }
   }
 }
 
 /* forms */
+
 div#error_explanation {
   padding: 10px;
   color: $clioRed;
@@ -132,6 +155,7 @@ div#error_explanation {
 }
 
 /* login */
+
 span.no-account, {
   a {
     vertical-align: bottom;

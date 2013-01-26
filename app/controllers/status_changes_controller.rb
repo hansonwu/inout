@@ -3,10 +3,12 @@ class StatusChangesController < ApplicationController
   before_filter :authenticate_user!
   
   def board
+    # Grab current user status information, set up new status change
     @current_user_is_in = current_user.is_in
     @status = @current_user_is_in ? nil : current_user.current_status.status
-    # Pass the unsuccessful status change to view if needed
     @status_change = StatusChange.new
+    
+    @users = User.all(include: :current_status, order: "users.name ASC")
   end
   
   def log
@@ -20,8 +22,11 @@ class StatusChangesController < ApplicationController
       flash[:success] = "Your status was successfully changed."
       redirect_to board_path
     else
+      # Render the board again with error information
       @current_user_is_in = current_user.is_in
+      @users = User.all(include: :current_status, order: "users.name ASC")
       render 'board'
     end
   end
+  
 end

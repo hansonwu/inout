@@ -1,8 +1,20 @@
-<%= form_for(@status_change) do |f| %>
-  <% if @current_user_is_in %>
-    <%= f.text_field :status %>
-    <%= f.submit 'Out!', class: "btn btn-danger" %>
-  <% else %>
-    <%= f.submit "I'm Back!", class: "btn btn-success" %>
+<div id="create-status-change">
+  <% if @status_change.errors.any? %>
+    <div id="error_explanation">
+      <%= pluralize(@status_change.errors.count, "error") %> prohibited the status change:
+      <ul>
+      <% @status_change.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
-<% end %>
+  <%= form_for(@status_change) do |f| %>
+    <% if @current_user_is_in %>
+      <%= f.text_field :status, class: "input-small", placeholder: "Out Message (ex. Lunch, Vacation)" %>
+      <%= f.submit 'Out!', class: "btn btn-danger" %>
+    <% else %>
+      <%= f.submit "Back!", class: "btn btn-success" %>
+    <% end %>
+  <% end %>
+</div>
