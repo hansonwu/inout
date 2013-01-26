@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-$clioRed:#be1d2d;
+$clioRed:#F80000;
 $clioGrey:#878787;
 
 html {
@@ -33,9 +33,29 @@ h2.form-title {
   color: $clioGrey;
 }
 
-input, textarea, select, .uneditable-input {
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
   width: 100%;
   margin-bottom: 15px;
+  padding: 3px 0px;
+}
+
+div.field_with_errors input {
+  border: 1px solid $clioRed;
 }
 
 input[type="checkbox"] {
@@ -67,6 +87,18 @@ footer {
     font-size: 50px;
   }
   text-align: center;
+}
+
+/* forms */
+div#error_explanation {
+  margin-bottom: 10px;
+  padding: 10px;
+  color: $clioRed;
+  h2 {
+    font-size: 18px;
+    line-height: 20px;
+    padding-left: 5px;
+  }
 }
 
 /* login */
