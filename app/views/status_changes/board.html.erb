@@ -1,1 +1,24 @@
-<%= render 'create' %>
+<div id="status-box" class="center hero-unit">
+  <h2><%= current_user.name %></h2>
+  <h4>
+    <% if @current_user_is_in %>
+      <span class="in-status">In the Office</span>
+    <% else %>
+      <span class="out-status">Out of the Office</span>
+      <% if !@status.empty? %>
+        <span class="out-message">(<%= @status %>)</span>
+      <% end %>
+    <% end %>
+  </h4>
+  <% if @status_change.errors.any? %>
+  <div id="error_explanation">
+    <%= pluralize(@status_change.errors.count, "error") %> prohibited the status change:
+    <ul>
+    <% @status_change.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+  <%= render 'create' %>
+</div>

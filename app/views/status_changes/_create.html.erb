@@ -1,21 +1,8 @@
-<div id="status-box" class="center hero-unit">
-  <h2><%= current_user.name %></h2>
-  <h4>
-    <% if current_user.status %>
-      <span class="out-status">Out</span>
-      <div id="status-message">
-        (<% current_user.status %>)
-      </div>
-    <% else %>
-      <span class="in-status">In the Office</span>
-    <% end %>
-  </h4>
-    <%= form_for(@status) do |f| %>
-      <% if !current_user.status %>
-        <%= f.text_field :status %>
-        <%= f.submit 'Out!', class: "btn btn-danger" %>
-      <% else %>
-        <%= f.submit "I'm Back!", class: "btn btn-success" %>
-      <% end %>
-    <% end %>
-</div>
+<%= form_for(@status_change) do |f| %>
+  <% if @current_user_is_in %>
+    <%= f.text_field :status %>
+    <%= f.submit 'Out!', class: "btn btn-danger" %>
+  <% else %>
+    <%= f.submit "I'm Back!", class: "btn btn-success" %>
+  <% end %>
+<% end %>

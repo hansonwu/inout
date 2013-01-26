@@ -2,7 +2,7 @@
 
 $clioRed: #F80000;
 $clioGrey: #878787;
-$clioGreen: #009933;
+$clioGreen: #00AA33;
 
 html {
   overflow-y: scroll;
@@ -95,7 +95,7 @@ footer {
   width: 365px;
   padding: 10px;
   margin: 0px auto;
-  line-height: 0px;
+  line-height: 16px;
   .in-status {
     color: $clioGreen;
     font-weight: bold;
@@ -103,12 +103,18 @@ footer {
   .out-status {
     color: $clioRed;
   }
+  .out-message {
+    color: $clioGrey;
+    font-size: 14px;
+  }
   form {
     .btn {
       padding: 3px 12px;
+      margin-top: 10px;
     }
   }
   input[type="text"] {
+    margin-top: 10px;
     margin-bottom: 0px;
     width: 160px;
   }
@@ -116,7 +122,6 @@ footer {
 
 /* forms */
 div#error_explanation {
-  margin-bottom: 10px;
   padding: 10px;
   color: $clioRed;
   h2 {

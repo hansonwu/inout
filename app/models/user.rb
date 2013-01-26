@@ -14,10 +14,9 @@ class User < ActiveRecord::Base
   has_many :status_changes, dependent: :destroy
   has_one :current_status, :class_name => "StatusChange", :order => 'created_at DESC'
   
-  def status
-    # Unless user is in or there is no status record, return an 'out' message 
-    unless self.current_status.nil? || self.current_status.in
-      current_status.status
-    end
+  # Check if a user is currently in the office
+  # Assume user is in if no records of status changes
+  def is_in
+   self.current_status.nil? || self.current_status.in
   end
 end
