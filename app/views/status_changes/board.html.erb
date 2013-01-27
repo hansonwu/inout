@@ -1,9 +1,12 @@
+<% content_for :head do %>
+  <meta http-equiv="refresh" content="30">
+<% end %>
 <div id="board-wrapper">
   <div id="board">
     <table class="table">
       <thead>
         <tr><th><h3>Board</h3>
-          <i class="icon-refresh"></i><%= link_to 'Reload', board_path %>
+          <i class="icon-refresh"></i><%= link_to 'Refesh', board_path %>
         </th></tr>
       </thead>
       <tbody>
