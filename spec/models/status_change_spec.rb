@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe StatusChange do
     
-  before do
+  before(:each) do
     @user = FactoryGirl.create(:user)
     @status_change = @user.status_changes.build(:in => false, :status => 'Lunch')
   end
