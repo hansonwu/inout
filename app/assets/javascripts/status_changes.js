@@ -4,3 +4,9 @@ $('#refresh-board')
     $('#users-table').html(data.html)
   });
 });
+
+function refreshBoard() {
+  $('#refresh-board').click();
+}
+/* Automatically refresh every 10 seconds */
+window.setInterval(refreshBoard, 10000);

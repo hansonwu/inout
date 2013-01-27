@@ -104,6 +104,9 @@ footer {
     i.icon-refresh {
       vertical-align: baseline;
     }
+    #refresh-board {
+      font-size: 14px;
+    }
     h3 {
       line-height: 30px;
     }
@@ -118,7 +121,7 @@ footer {
         width: 325px; 
         margin: 0px auto;
         padding: 12px 25px;
-        background-color: $clioBeige;
+        background-color: whitesmoke;
         border-radius: 10px;
         border: 1px solid silver;
       }
@@ -141,7 +144,7 @@ footer {
     }
     tr.other-user {
       td {
-        padding: 4px 10px;
+        padding: 10px;
       }
       h3 {
         font-size: 18px;
