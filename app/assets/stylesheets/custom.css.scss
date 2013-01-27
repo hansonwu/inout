@@ -37,6 +37,10 @@ body {
   }
 }
 
+.navbar {
+  border-bottom: 1px solid silver;
+}
+
 ul.pull-right {
   padding-top: 5px;
 }
@@ -63,6 +67,7 @@ footer {
 /* home */
 
 .hero-unit {
+  margin-top: 20px;
   h1 {
     font-size: 50px;
   }
@@ -126,7 +131,7 @@ footer {
         margin: 0px auto;
         padding: 12px 25px;
         background-color: whitesmoke;
-        border-radius: 10px;
+        border-radius: 5px;
         border: 1px solid silver;
       }
       td {
