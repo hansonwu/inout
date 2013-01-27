@@ -1,8 +1,10 @@
 @import "bootstrap";
 
-$clioRed: #F80000;
-$clioGrey: #878787;
-$clioGreen: #00AA33;
+$clioRed:#F80000;
+$clioGrey:#878787;
+$clioGreen:#00AA33;
+$clioBeige:#F5F5DC;
+$clioOrange:#FF8C00;
 
 html {
   overflow-y: scroll;
@@ -15,7 +17,7 @@ body {
 /* header */
 
 #logo {
-  color: darkOrange;
+  color: $clioOrange;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
@@ -97,10 +99,9 @@ footer {
     border-radius: 15px;
     width: 90%;
     margin: 20px auto;
-    padding: 25px 20px 20px;
+    padding: 20px;
     font-size: 18px;
     i.icon-refresh {
-      vertical-align: baseline;
       margin-right: 2px;
     }
     h3 {
@@ -109,9 +110,20 @@ footer {
     td {
       padding-left: 10px;
     }
+    table.current {
+      margin: 0px;
+    }
     tr.current-user {
+      #current-user-box {
+        width: 325px; 
+        margin: 0px auto;
+        padding: 12px 25px;
+        background-color: $clioBeige;
+        border-radius: 10px;
+        border: 1px solid silver;
+      }
       td {
-        padding-left: 20px;
+        border-style: none;
       }
       #create-status-change {
         margin: 5px 0px;
@@ -129,7 +141,7 @@ footer {
     }
     tr.other-user {
       td {
-        padding: 4px;
+        padding: 4px 10px;
       }
       h3 {
         font-size: 18px;

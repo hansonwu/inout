@@ -9,6 +9,14 @@ class StatusChangesController < ApplicationController
     @status_change = StatusChange.new
     
     @users = User.all(include: :current_status, order: "users.name ASC")
+    respond_to do |format|
+      format.json { 
+        render :json => { 
+          :html => (render_to_string('status_changes/_users.html.erb', :layout => false))
+        }
+      }
+      format.html
+    end
   end
   
   def log

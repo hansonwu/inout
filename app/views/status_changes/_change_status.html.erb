@@ -9,7 +9,7 @@
       </ul>
     </div>
   <% end %>
-  <%= form_for(@status_change) do |f| %>
+  <%= form_for @status_change do |f| %>
     <% if @current_user_is_in %>
       <%= f.text_field :status, class: "input-small", placeholder: "Out Message (ex. Lunch, Vacation)" %>
       <%= f.submit 'Out!', class: "btn btn-danger" %>
