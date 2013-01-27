@@ -127,6 +127,19 @@ footer {
         }
       }      
     }
+    tr.other-user {
+      td {
+        padding: 4px;
+      }
+      h3 {
+        font-size: 18px;
+        line-height: 20px;
+      }
+      span {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
   }
 }
 
