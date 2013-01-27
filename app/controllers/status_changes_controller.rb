@@ -12,7 +12,7 @@ class StatusChangesController < ApplicationController
     respond_to do |format|
       format.json { 
         render :json => { 
-          :html => (render_to_string('status_changes/_users.html.erb', :layout => false))
+          :html => (render_to_string('status_changes/_users', :layout => false, :formats => [:html] ))
         }
       }
       format.html

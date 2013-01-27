@@ -21,6 +21,10 @@
         </tr>
       </tbody>
     </table>
+    <div id="refresh">
+      <i class="icon-refresh"></i>
+      <%= link_to 'Refresh now', board_path, :remote => true, :id => 'refresh-board' %>
+    </div>
     <%= render 'users' %>
   </div>
 </div>

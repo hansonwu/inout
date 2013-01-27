@@ -1,9 +1,6 @@
 <table class="table" id="users-table">
   <thead>
-    <tr><th><h3>Board</h3>
-      <i class="icon-refresh"></i>
-      <%= link_to 'Refresh now', board_path, :remote => true, :id => 'refresh-board' %>
-    </th></tr>
+    <tr><th><h3>Board</h3></th></tr>
   </thead>
   <% @users.each do |user| %>
     <% unless user.id == current_user.id %>
