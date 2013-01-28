@@ -2,23 +2,27 @@
   <thead>
     <tr><th><h3>Board</h3></th></tr>
   </thead>
-  <% @users.each do |user| %>
-    <% unless user.id == current_user.id %>
-    <tr class="other-user">
-      <td>
-        <h3><%= user.name %></h3>
-          <% if user.current_status.nil? || user.current_status.in %>
-            <span class="in-status">Available</span>
-          <% else %>
-            <span class="out-status">Not Available </span>
-              <% if !user.current_status.status.empty? %>
-                <span class="status-message">(<%= user.current_status.status %>)</span>
-              <% end %>
-            </span>
-          <% end %>
-        </h4>
-      </td>
-    </tr>
+  <% if @users.length > 1 %>
+    <% @users.each do |user| %>
+      <% unless user.id == current_user.id %>
+      <tr class="other-user">
+        <td>
+          <h3><%= user.name %></h3>
+            <% if user.current_status.nil? || user.current_status.in %>
+              <span class="in-status">Available</span>
+            <% else %>
+              <span class="out-status">Not Available </span>
+                <% if !user.current_status.status.empty? %>
+                  <span class="status-message">(<%= user.current_status.status %>)</span>
+                <% end %>
+              </span>
+            <% end %>
+          </h4>
+        </td>
+      </tr>
+      <% end %>
     <% end %>
+  <% else %>
+    <tr class="other-user"><td><h3>No other users were found.</h3></td></tr>
   <% end %>
 </table>
