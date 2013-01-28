@@ -14,10 +14,12 @@ Features
 * Users are sorted alphabetically
 * Activity log - status changes are logged and each user has access to their own history
 
-Plugins / Gems
+Application Information
 ================================================================================
 
+* Rails version 3.2.11
 * Twitter bootstrap for the look and feel
+* SQLite for development and PostgreSQL in production, MySQL should simply work with a change in Gemfile. 
 * Devise for authentication
 * jQuery for JS/AJAX support
-* Rspec / Spork / FactoryGirl / Capybara for testing
+* Rspec / Spork / FactoryGirl / Capybara for testing: all tests are in the /spec folder. bundle exec rspec spec/ to run all.  
