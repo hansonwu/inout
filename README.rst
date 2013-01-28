@@ -13,3 +13,11 @@ Features
 * One click to change own status
 * Users are sorted alphabetically
 * Activity log - status changes are logged and each user has access to their own history
+
+Plugins / Gems
+================================================================================
+
+* Twitter bootstrap for the look and feel
+* Devise for authentication
+* jQuery for JS/AJAX support
+* Rspec / Spork / FactoryGirl / Capybara for testing
