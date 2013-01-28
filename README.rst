@@ -9,7 +9,7 @@ Features
 ================================================================================
 
 * Easy to use board with clear indication of status and displaying of 'out' message
-  * Automatic refresh of board every 10 seconds without reloading the entire page
-  * One click to change own status
-  * Users are sorted alphabetically
+* Automatic refresh of board every 10 seconds without reloading the entire page
+* One click to change own status
+* Users are sorted alphabetically
 * Activity log - status changes are logged and each user has access to their own history

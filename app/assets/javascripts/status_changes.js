@@ -11,6 +11,6 @@ $(document).ready(function() {
    $('#refresh-board').trigger('click');
  }
  
- /* Automatically refresh every 10 seconds */
- window.setInterval(refreshBoard, 10000);
+ /* Automatically refresh every 15 seconds */
+ window.setInterval(refreshBoard, 15000);
 });
