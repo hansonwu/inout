@@ -1,10 +1,10 @@
 @import "bootstrap";
 
-$clioRed:#F80000;
-$clioGrey:#878787;
-$clioGreen:#00AA33;
-$clioBeige:#F5F5DC;
-$clioOrange:#FF8C00;
+$Red:#F80000;
+$Grey:#878787;
+$Green:#00AA33;
+$Beige:#F5F5DC;
+$Orange:#FF8C00;
 
 html {
   overflow-y: scroll;
@@ -17,7 +17,7 @@ body {
 /* header */
 
 #logo {
-  color: $clioOrange;
+  color: $Orange;
   float: left;
   margin-right: 10px;
   margin-left: 10px;
@@ -50,9 +50,9 @@ ul.pull-right {
 footer {
   margin-top: 40px;
   padding-top: 8px;
-  border-top: 1px solid $clioGrey;
+  border-top: 1px solid $Grey;
   a {
-    color: $clioGrey;
+    color: $Grey;
   }  
   ul {
     float: right;
@@ -77,10 +77,10 @@ footer {
 /* status */
 
 .in-status {
-  color: $clioGreen;
+  color: $Green;
 }
 .out-status {
-  color: $clioRed;
+  color: $Red;
 }
 
 .in-status, .out-status {
@@ -89,7 +89,7 @@ footer {
 }
 
 .status-message {
-  color: $clioGrey;
+  color: $Grey;
   font-size: 14px;
 }
 
@@ -173,7 +173,7 @@ h2.form-title {
   text-align: center;
   font-size: 2.2em;
   font-weight: normal;
-  color: $clioGrey;
+  color: $Grey;
 }
 
 textarea,
@@ -194,7 +194,7 @@ input[type="checkbox"] {
 
 div#error_explanation {
   padding: 10px;
-  color: $clioRed;
+  color: $Red;
   h2 {
     font-size: 18px;
     line-height: 20px;
@@ -203,7 +203,7 @@ div#error_explanation {
 }
 
 div.field_with_errors input {
-  border: 1px solid $clioRed;
+  border: 1px solid $Red;
 }
 
 /* login */
